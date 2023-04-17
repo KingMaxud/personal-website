@@ -1,7 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import AsideNav from '../components/AsideNav.tsx'
+import Main from '../components/Main.tsx'
 ---
 
 <Layout title="Abdulmalikov Maksud">
-    <h1>Hello</h1>
+  <div class="flex flex-wrap font-mono bg-[#faf2f0] text-[#232323]">
+    <AsideNav client:visible />
+    <Main />
+  </div>
 </Layout>

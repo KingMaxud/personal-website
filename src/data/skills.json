@@ -1,0 +1,74 @@
+[
+  {
+    "text": "TYPESCRIPT",
+    "id": 1
+  },
+  {
+    "text": "JAVASCRIPT",
+    "id": 2
+  },
+  {
+    "text": "SASS",
+    "id": 3
+  },
+  {
+    "text": "TAILWINDCSS",
+    "id": 4
+  },
+  {
+    "text": "CHAKRA-UI",
+    "id": 5
+  },
+  {
+    "text": "REACT",
+    "id": 6
+  },
+  {
+    "text": "REDUX",
+    "id": 7
+  },
+  {
+    "text": "NEXT.JS",
+    "id": 8
+  },
+  {
+    "text": "APOLLO",
+    "id": 9
+  },
+  {
+    "text": "NODE.JS",
+    "id": 10
+  },
+  {
+    "text": "EXPRESS",
+    "id": 11
+  },
+  {
+    "text": "NEST",
+    "id": 12
+  },
+  {
+    "text": "MONGOOSE",
+    "id": 13
+  },
+  {
+    "text": "PRISMA",
+    "id": 14
+  },
+  {
+    "text": "GRAPHQL",
+    "id": 15
+  },
+  {
+    "text": "GIT",
+    "id": 16
+  },
+  {
+    "text": "REST",
+    "id": 17
+  },
+  {
+    "text": "gRPC",
+    "id": 18
+  }
+]
