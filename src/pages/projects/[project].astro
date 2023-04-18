@@ -1,0 +1,14 @@
+---
+import Main from '../../components/Projects/Main.tsx'
+
+export function getStaticPaths() {
+  return [
+    { params: { project: 'cartrader' }},
+    { params: { project: 'portfolio' }}
+  ]
+}
+
+const { project } = Astro.params
+---
+
+<div>Good project, {project}!</div>

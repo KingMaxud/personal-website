@@ -1,6 +1,6 @@
 import React from 'react'
 
-import cartraderXL from '../assets/cartrader-xl.jpg'
+import cartraderXL from '../../assets/cartrader-xl.jpg'
 
 const Projects = () => {
    return (

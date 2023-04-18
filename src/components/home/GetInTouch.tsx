@@ -1,8 +1,8 @@
 import React from 'react'
 
-import telegram from '../assets/telegram-black.svg'
-import mail from '../assets/mail.svg'
-import phone from '../assets/phone.svg'
+import telegram from '../../assets/telegram-black.svg'
+import mail from '../../assets/mail.svg'
+import phone from '../../assets/phone.svg'
 
 const GetInTouch = () => {
    return (

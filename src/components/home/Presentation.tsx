@@ -1,6 +1,6 @@
 import React from 'react'
 
-import telegram from '../assets/telegram-white.svg'
+import telegram from '../../assets/telegram-white.svg'
 
 const Presentation = () => {
    return (

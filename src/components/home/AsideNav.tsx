@@ -1,7 +1,7 @@
 import React from 'react'
 
-import logo from '../assets/logo.png'
-import download from '../assets/download.svg'
+import logo from '../../assets/logo.png'
+import download from '../../assets/download.svg'
 
 function scrollToTop() {
    window.scrollTo({
@@ -22,16 +22,16 @@ const AsideNav = () => {
             <nav className="font-semibold uppercase text-base tracking-widest leading-[72px] pl-4">
                <ul>
                   <li className="hover:text-rusty-red cursor-pointer w-fit relative before:content-[''] before:absolute before:bottom-6 before:left-0 before:w-0 before:h-px before:bg-rusty-red hover:before:w-full before:transition-all before:duration-300">
-                     <a href="#biography">Biography</a>
+                     <a href="../../../src/components/home/AsideNav#biography">Biography</a>
                   </li>
                   <li className="hover:text-rusty-red cursor-pointer w-fit relative before:content-[''] before:absolute before:bottom-6 before:left-0 before:w-0 before:h-px before:bg-rusty-red hover:before:w-full before:transition-all before:duration-300">
-                     <a href="#projects">Projects</a>
+                     <a href="../../../src/components/home/AsideNav#projects">Projects</a>
                   </li>
                   <li className="hover:text-rusty-red cursor-pointer w-fit relative before:content-[''] before:absolute before:bottom-6 before:left-0 before:w-0 before:h-px before:bg-rusty-red hover:before:w-full before:transition-all before:duration-300">
-                     <a href="#experience">Experience</a>
+                     <a href="../../../src/components/home/AsideNav#experience">Experience</a>
                   </li>
                   <li className="hover:text-rusty-red cursor-pointer w-fit relative before:content-[''] before:absolute before:bottom-6 before:left-0 before:w-0 before:h-px before:bg-rusty-red hover:before:w-full before:transition-all before:duration-300">
-                     <a href="#getintouch" className="hover:text-rusty-red">
+                     <a href="../../../src/components/home/AsideNav#getintouch" className="hover:text-rusty-red">
                         Get in touch
                      </a>
                   </li>
