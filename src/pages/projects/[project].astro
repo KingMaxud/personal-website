@@ -3,21 +3,43 @@ import Main from '../../components/projects/Main.tsx'
 import Layout from '../../layouts/Layout.astro'
 
 function capitalizeFirstLetter(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1)
+   return str.charAt(0).toUpperCase() + str.slice(1)
 }
 
-export function getStaticPaths() {
-  return [
-    { params: { project: 'cartrader' }},
-    { params: { project: 'portfolio' }}
-  ]
+export async function getStaticPaths() {
+   const query = `
+      query Projects {
+         projects {
+            name
+         }
+      }
+   `
+
+   try {
+      const { data: { projects } } = await fetch(
+         'https://eu-central-1-shared-euc1-02.cdn.hygraph.com/content/clgxslz6k19ny01umdcohdlwh/master',
+         {
+            method: 'POST',
+            headers: {
+               'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ query }),
+         },
+      ).then(res => res.json())
+
+      return projects.map(project => ({
+         params: {project: project.name.toLowerCase()}
+      }))
+   } catch (error) {
+      console.error(error)
+      return []
+   }
 }
 
 const { project } = Astro.params
 const capitalizedProject = capitalizeFirstLetter(project)
-
 ---
 
 <Layout title={`${capitalizedProject} Project`}>
-  <Main project={project} client:visible />
+   <Main project={project} client:visible />
 </Layout>
