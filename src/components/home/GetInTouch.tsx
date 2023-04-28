@@ -6,7 +6,7 @@ import phone from '../../assets/phone.svg'
 
 const GetInTouch = () => {
    return (
-      <section>
+      <section className='pb-6'>
          <h1 className="uppercase font-semibold tracking-wider text-4xl pt-8 pb-4 text-turquoise">
             Get in touch
          </h1>

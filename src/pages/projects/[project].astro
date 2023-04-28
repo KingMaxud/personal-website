@@ -1,5 +1,10 @@
 ---
-import Main from '../../components/Projects/Main.tsx'
+import Main from '../../components/projects/Main.tsx'
+import Layout from '../../layouts/Layout.astro'
+
+function capitalizeFirstLetter(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1)
+}
 
 export function getStaticPaths() {
   return [
@@ -9,6 +14,10 @@ export function getStaticPaths() {
 }
 
 const { project } = Astro.params
+const capitalizedProject = capitalizeFirstLetter(project)
+
 ---
 
-<div>Good project, {project}!</div>
+<Layout title={`${capitalizedProject} Project`}>
+  <Main project={project} client:visible />
+</Layout>
