@@ -9,9 +9,19 @@ function capitalizeFirstLetter(str) {
 export async function getStaticPaths() {
    const query = `
       query Projects {
-         projects {
+        projects {
+          name
+          description
+          images {
+            url
+          }
+          technologies {
+            id
             name
-         }
+            why
+            type
+          }
+        }
       }
    `
 
@@ -28,7 +38,8 @@ export async function getStaticPaths() {
       ).then(res => res.json())
 
       return projects.map(project => ({
-         params: {project: project.name.toLowerCase()}
+         params: { project: project.name.toLowerCase() },
+         props: { data: project }
       }))
    } catch (error) {
       console.error(error)
@@ -37,9 +48,10 @@ export async function getStaticPaths() {
 }
 
 const { project } = Astro.params
+const { data } = Astro.props
 const capitalizedProject = capitalizeFirstLetter(project)
 ---
 
 <Layout title={`${capitalizedProject} Project`}>
-   <Main project={project} client:visible />
+   <Main data={data} client:visible />
 </Layout>
