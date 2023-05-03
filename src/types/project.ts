@@ -1,12 +1,17 @@
 export type Project = {
+   id: string
    name: string
-   description: string
-   mainPhoto: string
+   shortDescription: string
+   liveLink: string
+   githubLink: string
+   images: Image[]
    technologies: Technology[]
 }
 
+type Image = {
+   url: string
+}
+
 type Technology = {
-   type: 'frontend' | 'backend'
    name: string
-   why?: string
 }
