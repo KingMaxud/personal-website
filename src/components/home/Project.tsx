@@ -8,16 +8,15 @@ type Props = {
 const Project = ({ project }: Props) => {
    return (
       <div className="flex relative max-w-4xl h-[15.75rem] mx-auto my-16">
-         <div className="absolute z-0">
-            <span className="relative">
-               <img
-                  height={252}
-                  width={448}
-                  src={project.images[0].url}
-                  alt={project.name.toLowerCase()}
-               />
-            </span>
-            <div></div>
+         <div className="absolute w-[448px] h-[252px]">
+            <img
+               className="absolute z-10"
+               src={project.images[0].url}
+               alt={project.name.toLowerCase()}
+            />
+            <div className="w-full h-full">
+               <div className="absolute top-0 left-6 w-full h-full border border-turquoise"></div>
+            </div>
          </div>
          <div className="bg-pinkish-beige max-w-2xl absolute w-[34.5rem] right-0 h-48 flex flex-col justify-between z-10">
             <h3 className="absolute bg-turquoise text-white text-2xl p-1.5 -top-11 left-6 font-mono">
