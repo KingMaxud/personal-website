@@ -18,36 +18,36 @@ const Project = ({ project }: Props) => {
    const translateDecorator = useTransform(
       scrollYProgress,
       [0, 1],
-      ['-20%', '20%'],
+      ['-120%', '-80%'],
    )
 
    const translateDescription = useTransform(
       scrollYProgress,
       [0, 1],
-      ['30%', '-30%'],
+      ['40%', '-40%'],
    )
 
    return (
       <div
          ref={ref}
-         className="flex relative max-w-4xl h-[15.75rem] mx-auto my-16"
+         className="flex relative my-16 w-full justify-between items-center"
       >
-         <div className="absolute w-[448px] h-[252px]">
+         <div className="relative w-[45%] left-[11%]">
             <img
-               className="absolute z-10"
+               className="relative z-10"
                src={project.images[0].url}
                alt={project.name.toLowerCase()}
             />
-            <motion.div
-               className="w-full h-full"
-               style={{ y: translateDecorator }}
-            >
-               <div className="absolute top-0 left-6 w-full h-full border border-turquoise"></div>
-            </motion.div>
+            <div className="w-full h-full">
+               <motion.div
+                  style={{ y: translateDecorator }}
+                  className="absolute left-6 w-full h-full border border-turquoise"
+               ></motion.div>
+            </div>
          </div>
          <motion.div
             style={{ translateY: translateDescription }}
-            className="bg-pinkish-beige max-w-2xl absolute w-[34.5rem] right-0 h-48 flex flex-col justify-between z-10"
+            className="bg-pinkish-beige relative w-[40%] h-48 flex flex-col justify-between z-10 right-[11%]"
          >
             <h3 className="absolute bg-turquoise text-white text-2xl p-1.5 -top-11 left-6 font-mono">
                {project.name}
