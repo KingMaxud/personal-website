@@ -2,11 +2,23 @@
 import Layout from '../layouts/Layout.astro'
 import AsideNav from '../components/home/AsideNav.tsx'
 import Main from '../components/home/Main.tsx'
+import { projectsQuery } from '../utils/queries.ts'
+
+const { data: { projects } } = await fetch(
+   'https://eu-central-1-shared-euc1-02.cdn.hygraph.com/content/clgxslz6k19ny01umdcohdlwh/master',
+   {
+      method: 'POST',
+      headers: {
+         'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ query: projectsQuery }),
+   },
+).then(res => res.json())
 ---
 
 <Layout title="Abdulmalikov Maksud">
    <div class="flex flex-wrap">
       <AsideNav client:visible />
-      <Main client:visible />
+      <Main projects={projects} client:visible />
    </div>
 </Layout>
