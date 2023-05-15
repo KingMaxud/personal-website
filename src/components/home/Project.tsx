@@ -33,11 +33,13 @@ const Project = ({ project }: Props) => {
          className="flex relative my-16 w-full justify-between items-center"
       >
          <div className="relative w-[45%] left-[11%]">
-            <img
-               className="relative z-10"
-               src={project.images[0].url}
-               alt={project.name.toLowerCase()}
-            />
+            <a href={`/projects/${project.name.toLowerCase()}`} target="_blank">
+               <img
+                  className="relative z-10"
+                  src={project.images[0].url}
+                  alt={project.name.toLowerCase()}
+               />
+            </a>
             <div className="w-full h-full">
                <motion.div
                   style={{ y: translateDecorator }}
@@ -55,13 +57,13 @@ const Project = ({ project }: Props) => {
             <p className="p-6">{project.shortDescription}</p>
             <ul className="flex justify-end gap-4 m-4">
                <li>
-                  <a href={`/projects/${project.name.toLowerCase()}`}>More</a>
+                  <a href={`/projects/${project.name.toLowerCase()}`} target="_blank">More</a>
                </li>
                <li>
-                  <a href={project.liveLink}>Live Site</a>
+                  <a href={project.liveLink} target="_blank">Live Site</a>
                </li>
                <li>
-                  <a href={project.githubLink}>Github</a>
+                  <a href={project.githubLink} target="_blank">Github</a>
                </li>
             </ul>
          </motion.div>

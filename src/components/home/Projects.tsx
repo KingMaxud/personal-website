@@ -17,7 +17,7 @@ const Projects = () => {
                   headers: {
                      'Content-Type': 'application/json',
                   },
-                  body: JSON.stringify({ query: projectsQuery }),
+                  body: JSON.stringify({ query: projectsQuery(640) }),
                },
             )
             const result = await response.json()

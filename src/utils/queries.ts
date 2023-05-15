@@ -1,4 +1,4 @@
-export const projectsQuery = `
+export const projectsQuery = (width: number) => `
    query Projects {
       projects {
          id
@@ -7,7 +7,9 @@ export const projectsQuery = `
          liveLink
          githubLink
          images {
-            url
+            url (transformation: {
+              image: { resize: { width: ${width} } }
+            })
          }
          technologies {
             name
