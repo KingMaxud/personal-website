@@ -1,13 +1,14 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 
 import type { Project as ProjectType } from '../../types/project'
 
 type Props = {
    project: ProjectType
+   isEven: boolean
 }
 
-const Project = ({ project }: Props) => {
+const Project = ({ project, isEven }: Props) => {
    const ref = useRef(null)
 
    const { scrollYProgress } = useScroll({
@@ -30,9 +31,15 @@ const Project = ({ project }: Props) => {
    return (
       <div
          ref={ref}
-         className="flex relative my-16 w-full justify-between items-center"
+         className={`flex ${
+            isEven ? 'flex-row' : 'flex-row-reverse'
+         } relative my-16 w-full justify-between items-center`}
       >
-         <div className="relative w-[45%] left-[11%]">
+         <div
+            className={`relative w-[45%] ${
+               isEven ? 'left-[11%]' : 'right-[11%]'
+            }`}
+         >
             <a href={`/projects/${project.name.toLowerCase()}`} target="_blank">
                <img
                   className="relative z-10"
@@ -49,7 +56,9 @@ const Project = ({ project }: Props) => {
          </div>
          <motion.div
             style={{ translateY: translateDescription }}
-            className="bg-pinkish-beige relative w-[40%] h-48 flex flex-col justify-between z-10 right-[11%]"
+            className={`bg-pinkish-beige relative w-[40%] h-48 flex flex-col justify-between z-10 ${
+               isEven ? 'right-[11%]' : 'left-[11%]'
+            }`}
          >
             <h3 className="absolute bg-turquoise text-white text-2xl p-1.5 -top-11 left-6 font-mono">
                {project.name}
@@ -57,13 +66,22 @@ const Project = ({ project }: Props) => {
             <p className="p-6">{project.shortDescription}</p>
             <ul className="flex justify-end gap-4 m-4">
                <li>
-                  <a href={`/projects/${project.name.toLowerCase()}`} target="_blank">More</a>
+                  <a
+                     href={`/projects/${project.name.toLowerCase()}`}
+                     target="_blank"
+                  >
+                     More
+                  </a>
                </li>
                <li>
-                  <a href={project.liveLink} target="_blank">Live Site</a>
+                  <a href={project.liveLink} target="_blank">
+                     Live Site
+                  </a>
                </li>
                <li>
-                  <a href={project.githubLink} target="_blank">Github</a>
+                  <a href={project.githubLink} target="_blank">
+                     Github
+                  </a>
                </li>
             </ul>
          </motion.div>

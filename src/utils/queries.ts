@@ -33,3 +33,15 @@ export const projectsQueryExtended = `
       }
    }
 `
+
+export const experienceQuery = `
+   query ExperienceQuery {
+      experiences {
+         id
+         company
+         dates
+         position
+         results
+      }
+   }
+`

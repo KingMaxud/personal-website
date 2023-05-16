@@ -19,7 +19,7 @@ type Props = {
 
 const Main = ({ data }: Props) => {
    return (
-      <main>
+      <main className='min-h-screen'>
          <a href="/" className="fixed cursor-pointer top-10 left-8">
             <img src={logo} alt="logo" className="w-12 h-12" />
          </a>
