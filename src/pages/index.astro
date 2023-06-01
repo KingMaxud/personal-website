@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import AsideNav from '../components/home/AsideNav.tsx'
+import MobileNav from '../components/home/MobileNav.tsx'
 import Main from '../components/home/Main.tsx'
 import { projectsQuery, experienceQuery } from '../utils/queries.ts'
 
@@ -30,6 +31,7 @@ const { data: { experiences } } = await fetch(
 <Layout title="Abdulmalikov Maksud">
    <div class="flex flex-wrap">
       <AsideNav client:visible />
+      <MobileNav client:visible />
       <Main experiences={experiences} projects={projects} client:visible />
    </div>
 </Layout>

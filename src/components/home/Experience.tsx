@@ -13,10 +13,10 @@ const Experience = ({ experience }: Props) => {
                {experience.dates}
             </span>
             <h1 className="uppercase text-base font-semibold col-start-1 row-start-2 text-black">
-               {experience.company}
+               {experience.position}
             </h1>
             <span className="text-rusty-red text-[13px] text-right font-medium italic col-start-2 row-start-2 self-end justify-end">
-               {experience.position}
+               {experience.company}
             </span>
          </div>
          <div className="bg-pinkish-beige py-8 px-10 leading-7">

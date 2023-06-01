@@ -6,7 +6,7 @@ import { scrollToTop } from '../utils'
 
 const AsideNav = () => {
    return (
-      <div className="max-w-sm w-1/4">
+      <div className="hidden lg:block max-w-sm w-1/4">
          <aside className="h-screen flex flex-col justify-between px-8 pt-4 pb-8 fixed">
             <div className="h-24 flex items-center">
                <div onClick={scrollToTop} className="cursor-pointer">
@@ -15,22 +15,22 @@ const AsideNav = () => {
             </div>
             <nav className="font-semibold uppercase text-base tracking-widest leading-[72px] pl-4">
                <ul>
-                  <li className="hover:text-rusty-red cursor-pointer w-fit relative before:content-[''] before:absolute before:bottom-6 before:left-0 before:w-0 before:h-px before:bg-rusty-red hover:before:w-full before:transition-all before:duration-300">
+                  <li className="hover:text-rusty-red cursor-pointer w-fit relative before:content-[''] transition-colors duration-300 before:absolute before:bottom-6 before:left-0 before:w-0 before:h-px before:bg-rusty-red hover:before:w-full before:transition-all before:duration-300">
                      <a href="../../../src/components/home/AsideNav#biography">
                         Biography
                      </a>
                   </li>
-                  <li className="hover:text-rusty-red cursor-pointer w-fit relative before:content-[''] before:absolute before:bottom-6 before:left-0 before:w-0 before:h-px before:bg-rusty-red hover:before:w-full before:transition-all before:duration-300">
+                  <li className="hover:text-rusty-red cursor-pointer w-fit relative before:content-[''] transition-colors duration-300 before:absolute before:bottom-6 before:left-0 before:w-0 before:h-px before:bg-rusty-red hover:before:w-full before:transition-all before:duration-300">
                      <a href="../../../src/components/home/AsideNav#projects">
                         Projects
                      </a>
                   </li>
-                  <li className="hover:text-rusty-red cursor-pointer w-fit relative before:content-[''] before:absolute before:bottom-6 before:left-0 before:w-0 before:h-px before:bg-rusty-red hover:before:w-full before:transition-all before:duration-300">
+                  <li className="hover:text-rusty-red cursor-pointer w-fit relative before:content-[''] transition-colors duration-300 before:absolute before:bottom-6 before:left-0 before:w-0 before:h-px before:bg-rusty-red hover:before:w-full before:transition-all before:duration-300">
                      <a href="../../../src/components/home/AsideNav#experience">
                         Experience
                      </a>
                   </li>
-                  <li className="hover:text-rusty-red cursor-pointer w-fit relative before:content-[''] before:absolute before:bottom-6 before:left-0 before:w-0 before:h-px before:bg-rusty-red hover:before:w-full before:transition-all before:duration-300">
+                  <li className="hover:text-rusty-red cursor-pointer w-fit relative before:content-[''] transition-colors duration-300 before:absolute before:bottom-6 before:left-0 before:w-0 before:h-px before:bg-rusty-red hover:before:w-full before:transition-all before:duration-300">
                      <a
                         href="../../../src/components/home/AsideNav#getintouch"
                         className="hover:text-rusty-red"

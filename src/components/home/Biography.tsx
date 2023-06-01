@@ -18,7 +18,7 @@ const Biography = () => {
 
             <div className="flex flex-wrap gap-3 text-sm font-semibold">
                {skillsData.map((skill) => (
-                  <div key={skill.id} className="cursor-pointer border border-black w-24 h-24 flex items-center justify-center bg-pinkish-beige">
+                  <div key={skill.id} className="border border-black w-24 h-24 flex items-center justify-center bg-pinkish-beige">
                      {skill.text}
                   </div>
                ))}
