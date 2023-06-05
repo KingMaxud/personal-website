@@ -7,9 +7,9 @@ type Props = {
 
 const Experience = ({ experience }: Props) => {
    return (
-      <div className="max-w-fit mr-4">
+      <div className="max-w-fit mx-4 lg:mr-6 lg:ml-0">
          <div className="grid grid-cols-2 gap-2 tracking-widest leading-5 mb-1">
-            <span className="text-[13px] text-lighter-gray col-start-1 row-start-1">
+            <span className="text-[13px] text-lighter-gray col-start-1 row-start-1 col-end-3">
                {experience.dates}
             </span>
             <h1 className="uppercase text-base font-semibold col-start-1 row-start-2 text-black">
@@ -19,7 +19,7 @@ const Experience = ({ experience }: Props) => {
                {experience.company}
             </span>
          </div>
-         <div className="bg-pinkish-beige py-8 px-10 leading-7">
+         <div className="bg-pinkish-beige py-4 px-5 sm:py-6 sm:px:7 lg:py-8 lg:px-10 leading-5 lg:leading-7">
             <ul>
                {experience.results.map((result, i) => (
                   <li

@@ -1,4 +1,4 @@
-import { motion, useAnimation } from 'framer-motion'
+import { useAnimate } from 'framer-motion'
 import React, { useEffect, useState } from 'react'
 
 import hamburger from '../../assets/hamburger.svg'
@@ -7,24 +7,24 @@ import close from '../../assets/close.svg'
 
 const MobileNav = () => {
    const [isOpen, setIsOpen] = useState(false)
-   const controls = useAnimation()
+   const [isMounted, setIsMounted] = useState(false)
+   const [scope, animate] = useAnimate()
 
    const handleToggle = () => {
       setIsOpen(prevState => !prevState)
    }
 
-   const variants = {
-      open: { x: 0 },
-      closed: { x: '100%' },
-   }
-
-   const transition = {
-      ease: [0.31, 1, 0.55, 0.98],
-   }
-
    useEffect(() => {
-      controls.start(isOpen ? 'open' : 'closed')
-   }, [controls, isOpen])
+      if (isMounted) {
+         animate(
+            scope.current,
+            { x: isOpen ? 0 : '100%' },
+            { duration: 0.4, ease: [0.31, 1, 0.55, 0.98] },
+         )
+      } else {
+         setIsMounted(true)
+      }
+   }, [isOpen])
 
    return (
       <div className="block lg:hidden h-20 w-full absolute flex justify-between bg-transparent items-center px-4">
@@ -34,12 +34,9 @@ const MobileNav = () => {
          <button onClick={handleToggle}>
             <img src={hamburger} alt="hamburger" className="w-8 h-8" />
          </button>
-         <motion.nav
-            variants={variants}
-            initial="closed"
-            animate={controls}
-            transition={transition}
-            className={`fixed z-20 right-0 top-0 h-screen w-96 bg-main-bg overflow-hidden shadow-custom`}
+         <nav
+            ref={scope}
+            className={`fixed z-20 right-0 top-0 h-screen w-96 bg-main-bg overflow-hidden shadow-custom translate-x-full`}
          >
             <button className="absolute top-6 right-4" onClick={handleToggle}>
                <img src={close} alt="close" />
@@ -66,7 +63,7 @@ const MobileNav = () => {
                   </a>
                </li>
             </ul>
-         </motion.nav>
+         </nav>
       </div>
    )
 }

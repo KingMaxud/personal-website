@@ -7,11 +7,11 @@ import phone from '../../assets/phone.svg'
 const GetInTouch = () => {
    return (
       <section className='pb-6'>
-         <h1 className="uppercase font-semibold tracking-wider text-4xl pt-8 pb-4 text-turquoise">
+         <h1 className="uppercase font-semibold tracking-normal lg:tracking-wider pt-4 pb-2 lg:pt-8 lg:pb-4 text-turquoise ml-4 lg:ml-0 text-3xl lg:text-4xl">
             Get in touch
          </h1>
-         <div className='flex flex-col gap-2'>
-            <p className="font-playfair-display text-4xl leading-10 tracking-wide pr-[5vw] pb-8">
+         <div className='flex flex-col gap-2 ml-4 lg:ml-0'>
+            <p className="font-playfair-display text-2xl lg:text-4xl tracking-wide pr-6 pb-3 lg:pb-6">
                I am currently looking for opportunity.
             </p>
             <div className="flex">

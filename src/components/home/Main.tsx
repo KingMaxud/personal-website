@@ -19,7 +19,7 @@ const Main = ({ projects, experiences }: Props) => {
          <Presentation />
          <Biography />
          <section>
-            <h1 className="uppercase font-semibold tracking-wider text-4xl pt-8 pb-4 text-turquoise">
+            <h1 className="uppercase font-semibold tracking-wider pt-4 pb-2 lg:pt-8 lg:pb-4 text-turquoise ml-4 lg:ml-0 text-3xl lg:text-4xl">
                Projects
             </h1>
             <div className="flex flex-col gap-y-10">
@@ -33,7 +33,7 @@ const Main = ({ projects, experiences }: Props) => {
             </div>
          </section>
          <section>
-            <h1 className="uppercase font-semibold tracking-wider text-4xl pt-8 pb-4 text-turquoise">
+            <h1 className="uppercase font-semibold tracking-wider pt-4 pb-2 lg:pt-8 lg:pb-4 text-turquoise ml-4 lg:ml-0 text-3xl lg:text-4xl">
                Experience
             </h1>
             <div className="flex flex-col gap-y-10">

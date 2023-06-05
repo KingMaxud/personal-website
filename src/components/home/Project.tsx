@@ -63,7 +63,7 @@ const Project = ({ project, isEven }: Props) => {
             <h3 className="absolute bg-turquoise text-white text-2xl p-1.5 -top-11 left-6 font-mono">
                {project.name}
             </h3>
-            <p className="p-6">{project.shortDescription}</p>
+            <p className="p-6 text-ellipsis">{project.shortDescription}</p>
             <ul className="flex justify-end gap-4 m-4">
                <li>
                   <a
