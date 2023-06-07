@@ -1,15 +1,47 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 
 import type { Project as ProjectType } from '../../types/project'
+import { resizeImageUrl } from '../../utils/resizeImageUrl'
+import useWindowWidth from '../../utils/useWindowWidth'
 
 type Props = {
    project: ProjectType
    isEven: boolean
 }
 
+function pickImageWidth(windowWidth: number): number {
+   const imageWidths = [
+      { windowWidth: 2560, width: 1780 },
+      { windowWidth: 1920, width: 1160 },
+      { windowWidth: 1536, width: 870 },
+      { windowWidth: 1280, width: 690 },
+      { windowWidth: 1024, width: 576 },
+      { windowWidth: 768, width: 440 },
+      { windowWidth: 640, width: 346 },
+   ]
+
+   for (let i = 0; i < imageWidths.length; i++) {
+      if (windowWidth >= imageWidths[i].windowWidth) {
+         return imageWidths[i].width
+      }
+   }
+
+   return 288
+}
+
 const Project = ({ project, isEven }: Props) => {
    const ref = useRef(null)
+   const windowWidth = useWindowWidth()
+   const [imageUrl, setImageUrl] = useState(
+      resizeImageUrl(project.images[0].url, pickImageWidth(windowWidth)),
+   )
+
+   useEffect(() => {
+      setImageUrl(
+         resizeImageUrl(project.images[0].url, pickImageWidth(windowWidth)),
+      )
+   }, [windowWidth])
 
    const { scrollYProgress } = useScroll({
       target: ref,
@@ -32,18 +64,18 @@ const Project = ({ project, isEven }: Props) => {
       <div
          ref={ref}
          className={`flex ${
-            isEven ? 'flex-row' : 'flex-row-reverse'
-         } relative my-16 w-full justify-between items-center`}
+            isEven ? 'md:flex-row' : 'md:flex-row-reverse'
+         } flex-col relative my-16 w-full justify-between items-center`}
       >
          <div
-            className={`relative w-[45%] ${
-               isEven ? 'left-[11%]' : 'right-[11%]'
+            className={`relative w-[75%] sm:w-[440px] md:w-[45%] ${
+               isEven ? 'md:left-[11%]' : 'md:right-[11%]'
             }`}
          >
             <a href={`/projects/${project.name.toLowerCase()}`} target="_blank">
                <img
-                  className="relative z-10"
-                  src={project.images[0].url}
+                  className="relative z-10 w-full"
+                  src={imageUrl}
                   alt={project.name.toLowerCase()}
                />
             </a>
@@ -56,15 +88,18 @@ const Project = ({ project, isEven }: Props) => {
          </div>
          <motion.div
             style={{ translateY: translateDescription }}
-            className={`bg-pinkish-beige relative w-[40%] h-48 flex flex-col justify-between z-10 ${
-               isEven ? 'right-[11%]' : 'left-[11%]'
+            className={`bg-pinkish-beige relative w-[85%] md:w-[40%] h-fit flex flex-col justify-between z-10 ${
+               isEven ? 'md:right-[11%]' : 'md:left-[11%]'
             }`}
          >
             <h3 className="absolute bg-turquoise text-white text-2xl p-1.5 -top-11 left-6 font-mono">
                {project.name}
             </h3>
-            <p className="p-6 text-ellipsis">{project.shortDescription}</p>
-            <ul className="flex justify-end gap-4 m-4">
+
+            <p className="p-4 lg:p-6 text-ellipsis min-h-[136px]">
+               {project.shortDescription}
+            </p>
+            <ul className="flex justify-end gap-3 lg:gap-4 m-3 lg:m-4">
                <li>
                   <a
                      href={`/projects/${project.name.toLowerCase()}`}

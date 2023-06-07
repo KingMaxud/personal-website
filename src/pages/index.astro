@@ -32,6 +32,6 @@ const { data: { experiences } } = await fetch(
    <div class="flex flex-wrap">
       <AsideNav client:visible />
       <MobileNav client:visible />
-      <Main experiences={experiences} projects={projects} client:visible />
+      <Main experiences={experiences} projects={projects} client:only />
    </div>
 </Layout>
