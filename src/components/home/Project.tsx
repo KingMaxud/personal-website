@@ -17,8 +17,6 @@ function pickImageWidth(windowWidth: number): number {
       { windowWidth: 1536, width: 870 },
       { windowWidth: 1280, width: 690 },
       { windowWidth: 1024, width: 576 },
-      { windowWidth: 768, width: 440 },
-      { windowWidth: 640, width: 346 },
    ]
 
    for (let i = 0; i < imageWidths.length; i++) {
@@ -27,7 +25,7 @@ function pickImageWidth(windowWidth: number): number {
       }
    }
 
-   return 288
+   return 480
 }
 
 const Project = ({ project, isEven }: Props) => {
