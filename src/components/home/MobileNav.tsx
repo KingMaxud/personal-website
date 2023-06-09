@@ -18,7 +18,7 @@ const MobileNav = () => {
       if (isMounted) {
          animate(
             scope.current,
-            { x: isOpen ? 0 : '100%' },
+            { transform: isOpen ? 'translateX(0%)' : 'translateX(100%)' },
             { duration: 0.4, ease: [0.31, 1, 0.55, 0.98] },
          )
       } else {
@@ -43,22 +43,22 @@ const MobileNav = () => {
             </button>
             <ul className="text-lg uppercase font-semibold tracking-widest ml-24 my-24">
                <li className="hover:text-rusty-red transition-colors duration-300 py-6">
-                  <a href="../../../src/components/home/AsideNav#biography">
+                  <a href="#biography" onClick={handleToggle}>
                      Biography
                   </a>
                </li>
                <li className="hover:text-rusty-red transition-colors duration-300 py-6">
-                  <a href="../../../src/components/home/AsideNav#projects">
+                  <a href="#projects" onClick={handleToggle}>
                      Projects
                   </a>
                </li>
                <li className="hover:text-rusty-red transition-colors duration-300 py-6">
-                  <a href="../../../src/components/home/AsideNav#experience">
+                  <a href="#experience" onClick={handleToggle}>
                      Experience
                   </a>
                </li>
                <li className="hover:text-rusty-red transition-colors duration-300 py-6">
-                  <a href="../../../src/components/home/AsideNav#getintouch">
+                  <a href="#get-in-touch" onClick={handleToggle}>
                      Get in touch
                   </a>
                </li>

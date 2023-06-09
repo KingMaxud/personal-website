@@ -4,7 +4,7 @@ import telegram from '../../assets/telegram-white.svg'
 
 const Presentation = () => {
    return (
-      <section
+      <section id="presentation"
          className="bg-man h-screen bg-cover bg-center font-mono text-xl"
       >
          <div className="text-white absolute top-[23.8%] right-[6.3%] hidden lg:block">

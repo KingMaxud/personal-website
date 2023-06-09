@@ -3,7 +3,7 @@ import skillsData from '../../data/skills.json'
 
 const Biography = () => {
    return (
-      <section>
+      <section id="biography">
          <h1 className="font-semibold tracking-wider text-4xl pt-4 pb-2 lg:pt-8 lg:pb-4 text-turquoise font-playfair-display mx-4 lg:mx-0">
             Hello! I’m Maksud
          </h1>
