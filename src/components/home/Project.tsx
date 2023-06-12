@@ -1,45 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 
 import type { Project as ProjectType } from '../../types/project'
-import { resizeImageUrl } from '../../utils/resizeImageUrl'
-import useWindowWidth from '../../utils/useWindowWidth'
 
 type Props = {
    project: ProjectType
    isEven: boolean
 }
 
-function pickImageWidth(windowWidth: number): number {
-   const imageWidths = [
-      { windowWidth: 2560, width: 1780 },
-      { windowWidth: 1920, width: 1160 },
-      { windowWidth: 1536, width: 870 },
-      { windowWidth: 1280, width: 690 },
-      { windowWidth: 1024, width: 576 },
-   ]
-
-   for (let i = 0; i < imageWidths.length; i++) {
-      if (windowWidth >= imageWidths[i].windowWidth) {
-         return imageWidths[i].width
-      }
-   }
-
-   return 480
-}
-
 const Project = ({ project, isEven }: Props) => {
    const ref = useRef(null)
-   const windowWidth = useWindowWidth()
-   const [imageUrl, setImageUrl] = useState(
-      resizeImageUrl(project.images[0].url, pickImageWidth(windowWidth)),
-   )
-
-   useEffect(() => {
-      setImageUrl(
-         resizeImageUrl(project.images[0].url, pickImageWidth(windowWidth)),
-      )
-   }, [windowWidth])
 
    const { scrollYProgress } = useScroll({
       target: ref,
@@ -73,7 +43,7 @@ const Project = ({ project, isEven }: Props) => {
             <a href={`/projects/${project.name.toLowerCase()}`} target="_blank">
                <img
                   className="relative z-10 w-full"
-                  src={imageUrl}
+                  src={project.images[0].url}
                   alt={project.name.toLowerCase()}
                />
             </a>

@@ -36,5 +36,7 @@ const capitalizedProject = capitalizeFirstLetter(project)
 ---
 
 <Layout title={`${capitalizedProject} Project`}>
-   <Main data={data} client:only />
+   <Main data={data} client:visible />
 </Layout>
+
+

@@ -22,7 +22,12 @@ module.exports = {
          },
          gridTemplateColumns: {
             skills: 'repeat(auto-fit, 80px)',
-            skillsSm: 'repeat(auto-fit, 96px)'
+            skillsSm: 'repeat(auto-fit, 96px)',
+            projectMd: 'min-content auto'
+         },
+         screens: {
+            '3xl': '1920',
+            '4xl': '2560'
          }
       },
    },

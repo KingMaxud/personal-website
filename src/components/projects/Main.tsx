@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 import logo from '../../assets/logo.png'
 import Technology from './Technology'
-import useWindowWidth from '../../utils/useWindowWidth'
-import { resizeImageUrl } from '../../utils/resizeImageUrl'
 
 type Props = {
    data: {
@@ -19,37 +17,7 @@ type Props = {
    }
 }
 
-function pickImageWidth(windowWidth: number): number {
-   const imageWidths = [
-      { windowWidth: 2560, width: 1600 },
-      { windowWidth: 1920, width: 1000 },
-      { windowWidth: 1536, width: 850 },
-      { windowWidth: 1280, width: 690 },
-      { windowWidth: 1024, width: 576 },
-      { windowWidth: 640, width: 462 },
-   ]
-
-   for (let i = 0; i < imageWidths.length; i++) {
-      if (windowWidth >= imageWidths[i].windowWidth) {
-         return imageWidths[i].width
-      }
-   }
-
-   return 600
-}
-
 const Main = ({ data }: Props) => {
-   const windowWidth = useWindowWidth()
-   const [imageUrl, setImageUrl] = useState(
-      resizeImageUrl(data.images[1].url, pickImageWidth(windowWidth)),
-   )
-
-   useEffect(() => {
-      setImageUrl(
-         resizeImageUrl(data.images[1].url, pickImageWidth(windowWidth)),
-      )
-   }, [windowWidth])
-
    return (
       <main className="min-h-screen">
          <a href="/" className="absolute cursor-pointer top-6 left-4 sm:top-10 sm:left-8">
@@ -59,12 +27,13 @@ const Main = ({ data }: Props) => {
             <h1 className="font-semibold tracking-wider text-3xl md:text-5xl text-turquoise py-10">
                {data.name}
             </h1>
-            <div className="flex flex-col sm:flex-row items-center relative">
-               <img
-                  className="w-full h-full sm:w-8/12 sm:h-8/12 lg:w-full lg:h-full mb-4 sm:mb-0"
-                  src={imageUrl}
-                  alt={data.name.toLowerCase()}
-               />
+            <div className="grid md:grid-cols-projectMd items-center relative">
+               <div className="w-[80vw] h-[45vw] md:w-[56vw] md:h-[31.5vw] lg:w-[48vw] lg:h-[27vw] md:w-[27vw] mb-4 md:mb-0 relative">
+                  <img
+                     src={data.images[1].url}
+                     alt={data.name.toLowerCase()}
+                  />
+               </div>
                <p className="text-lg lg:text-xl sm:pl-6">
                   {data.description}
                </p>
