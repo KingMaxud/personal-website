@@ -28,7 +28,7 @@ const Main = ({ data }: Props) => {
                {data.name}
             </h1>
             <div className="grid md:grid-cols-projectMd items-center relative">
-               <div className="w-[80vw] h-[45vw] md:w-[56vw] md:h-[31.5vw] lg:w-[48vw] lg:h-[27vw] md:w-[27vw] mb-4 md:mb-0 relative">
+               <div className="w-[80vw] h-[45vw] md:w-[48vw] md:h-[27vw] lg:w-[48vw] lg:h-[27vw] md:w-[27vw] mb-4 md:mb-0 relative">
                   <img
                      src={data.images[1].url}
                      alt={data.name.toLowerCase()}
