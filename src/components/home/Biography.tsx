@@ -11,7 +11,7 @@ const Biography = () => {
             <p className="font-playfair-display leading-7 lg:leading-10 tracking-wide pb-4 lg:pb-8 mx-4 lg:mx-0 lg:mr-6 text-lg sm:text-2xl lg:text-4xl">
                Self-sufficient and proactive Web Developer with a passion for
                developing innovative solutions. Drawing on a deep understanding of
-               both front-end and back-end technologies, I am committed to creating
+               both Front-end and Back-end technologies, I am committed to creating
                seamless, intuitive experiences that enhance the lives of those who
                use them.
             </p>
