@@ -15,20 +15,22 @@ module.exports = {
             'playfair-display': ['Playfair Display', 'serif'],
          },
          backgroundImage: {
-            bg: "url('https://media.graphassets.com/output=format:jpg/IqmY4WjS1iIqlE4pHNgO')",
+            bgMd: "url('https://media.graphassets.com/output=format:jpg/IqmY4WjS1iIqlE4pHNgO')",
+            bg: 'url(https://media.graphassets.com/output=format:jpg/resize=height:600,fit:max/z1v1F2aGStSpErESErQu)',
          },
          boxShadow: {
-            custom: 'rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px'
+            custom:
+               'rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px',
          },
          gridTemplateColumns: {
             skills: 'repeat(auto-fit, 80px)',
             skillsSm: 'repeat(auto-fit, 96px)',
-            projectMd: 'min-content auto'
+            projectMd: 'min-content auto',
          },
          screens: {
             '3xl': '1920',
-            '4xl': '2560'
-         }
+            '4xl': '2560',
+         },
       },
    },
    plugins: [],
