@@ -16,25 +16,16 @@ const AsideNav = () => {
             <nav className="font-semibold uppercase text-base tracking-widest leading-[72px] pl-4">
                <ul>
                   <li className="hover:text-rusty-red cursor-pointer w-fit relative before:content-[''] transition-colors duration-300 before:absolute before:bottom-6 before:left-0 before:w-0 before:h-px before:bg-rusty-red hover:before:w-full before:transition-all before:duration-300">
-                     <a href="#biography">
-                        Biography
-                     </a>
+                     <a href="#biography">Biography</a>
                   </li>
                   <li className="hover:text-rusty-red cursor-pointer w-fit relative before:content-[''] transition-colors duration-300 before:absolute before:bottom-6 before:left-0 before:w-0 before:h-px before:bg-rusty-red hover:before:w-full before:transition-all before:duration-300">
-                     <a href="#projects">
-                        Projects
-                     </a>
+                     <a href="#projects">Projects</a>
                   </li>
                   <li className="hover:text-rusty-red cursor-pointer w-fit relative before:content-[''] transition-colors duration-300 before:absolute before:bottom-6 before:left-0 before:w-0 before:h-px before:bg-rusty-red hover:before:w-full before:transition-all before:duration-300">
-                     <a href="#experience">
-                        Experience
-                     </a>
+                     <a href="#experience">Experience</a>
                   </li>
                   <li className="hover:text-rusty-red cursor-pointer w-fit relative before:content-[''] transition-colors duration-300 before:absolute before:bottom-6 before:left-0 before:w-0 before:h-px before:bg-rusty-red hover:before:w-full before:transition-all before:duration-300">
-                     <a
-                        href="#get-in-touch"
-                        className="hover:text-rusty-red"
-                     >
+                     <a href="#get-in-touch" className="hover:text-rusty-red">
                         Get in touch
                      </a>
                   </li>
@@ -49,11 +40,14 @@ const AsideNav = () => {
                </div>
                <div className="cursor-pointer flex">
                   <span className="relative top-1">
-                     <img src={download} alt="download" className="" />
+                     <img src={download} alt="download" />
                   </span>
-                  <span className="uppercase font-semibold tracking-widest pl-1.5">
+                  <a
+                     href="https://media.graphassets.com/XNgQ7dyQ8qEjqknDWk74"
+                     className="uppercase font-semibold tracking-widest pl-1.5 hover:text-rusty-red transition-colors duration-300"
+                  >
                      Download Resume
-                  </span>
+                  </a>
                </div>
             </div>
          </aside>

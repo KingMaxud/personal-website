@@ -68,7 +68,7 @@ const Project = ({ project, isEven }: Props) => {
                {project.shortDescription}
             </p>
             <ul className="flex justify-end gap-3 lg:gap-4 m-3 lg:m-4">
-               <li>
+               <li className='hover:text-rusty-red transition-colors duration-300'>
                   <a
                      href={`/projects/${project.name.toLowerCase()}`}
                      target="_blank"
@@ -76,12 +76,12 @@ const Project = ({ project, isEven }: Props) => {
                      More
                   </a>
                </li>
-               <li>
+               <li className='hover:text-rusty-red transition-colors duration-300'>
                   <a href={project.liveLink} target="_blank">
                      Live Site
                   </a>
                </li>
-               <li>
+               <li className='hover:text-rusty-red transition-colors duration-300'>
                   <a href={project.githubLink} target="_blank">
                      Github
                   </a>
