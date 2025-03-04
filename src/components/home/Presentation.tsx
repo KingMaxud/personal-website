@@ -1,7 +1,5 @@
 import React from 'react'
 
-import telegram from '../../assets/telegram-white.svg'
-
 const Presentation = () => {
    return (
       <section
@@ -23,9 +21,9 @@ const Presentation = () => {
                rel="noopener"
             >
                <img
-                  className="relative top-1 w-5 h-5"
-                  src={telegram}
-                  alt="telegram"
+                 className="relative top-1 w-5 h-5"
+                 src="/telegram-white.svg"
+                 alt="telegram"
                />
                <p className="pl-2">kingmaxud</p>
             </a>

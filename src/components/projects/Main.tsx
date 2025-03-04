@@ -1,6 +1,5 @@
 import React from 'react'
 
-import logo from '../../assets/logo.png'
 import Technology from './Technology'
 
 type Props = {
@@ -21,7 +20,7 @@ const Main = ({ data }: Props) => {
    return (
       <main className="min-h-screen">
          <a href="/" className="absolute cursor-pointer top-6 left-4 sm:top-10 sm:left-8">
-            <img src={logo} alt="logo" className="w-9 h-9 sm:w-12 sm:h-12" />
+            <img src="/logo.png" alt="logo" className="w-9 h-9 sm:w-12 sm:h-12" />
          </a>
          <section className="flex flex-col items-center w-11/12 md:w-4/5 mx-auto">
             <h1 className="font-semibold tracking-wider text-3xl md:text-5xl text-turquoise py-10">

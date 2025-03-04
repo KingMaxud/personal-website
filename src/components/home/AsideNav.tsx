@@ -1,7 +1,5 @@
 import React from 'react'
 
-import logo from '../../assets/logo.png'
-import download from '../../assets/download.svg'
 import { scrollToTop } from '../utils'
 
 const AsideNav = () => {
@@ -10,7 +8,7 @@ const AsideNav = () => {
          <aside className="h-screen flex flex-col justify-between px-8 pt-4 pb-8 fixed">
             <div className="h-24 flex items-center">
                <div onClick={scrollToTop} className="cursor-pointer">
-                  <img src={logo} alt="logo" className="w-12 h-12" />
+                  <img src="/logo.png" alt="logo" className="w-12 h-12" />
                </div>
             </div>
             <nav className="font-semibold uppercase text-base tracking-widest leading-[72px] pl-4">
@@ -40,7 +38,7 @@ const AsideNav = () => {
                </div>
                <div className="cursor-pointer flex">
                   <span className="relative top-1">
-                     <img src={download} alt="download" />
+                     <img src="/download.svg" alt="download" />
                   </span>
                   <a
                      href="https://media.graphassets.com/XNgQ7dyQ8qEjqknDWk74"

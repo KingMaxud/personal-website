@@ -1,9 +1,5 @@
 import React from 'react'
 
-import telegram from '../../assets/telegram-black.svg'
-import mail from '../../assets/mail.svg'
-import phone from '../../assets/phone.svg'
-
 const GetInTouch = () => {
    return (
       <section id="get-in-touch" className="pb-6">
@@ -22,7 +18,7 @@ const GetInTouch = () => {
                   <div className="flex mb-1.5">
                      <img
                         className="relative top-1 w-5 h-5 mr-2"
-                        src={mail}
+                        src='/mail.svg'
                         alt="mail"
                      />
                      <a
@@ -37,7 +33,7 @@ const GetInTouch = () => {
                   <div className="flex mb-1.5">
                      <img
                         className="relative top-1 w-5 h-5 mr-2"
-                        src={phone}
+                        src='/phone.svg'
                         alt="phone"
                      />
                      <a
@@ -52,7 +48,7 @@ const GetInTouch = () => {
                   <div className="flex">
                      <img
                         className="relative top-1 w-5 h-5"
-                        src={telegram}
+                        src='/telegram-black.svg'
                         alt="telegram"
                      />
                      <a
