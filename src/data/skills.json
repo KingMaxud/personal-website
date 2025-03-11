@@ -23,7 +23,11 @@
     "GRAPHQL",
     "gRPC",
     "MONGOOSE",
+    "SURREALDB",
     "SASS",
     "TAILWINDCSS"
+  ],
+  "blockchain": [
+    "VIEM", "ETHERS", "METAMASK", "SMART CONTRACTS", "dApps"
   ]
 }

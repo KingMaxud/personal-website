@@ -44,13 +44,13 @@ const MobileNav = () => {
                   </a>
                </li>
                <li className="hover:text-rusty-red transition-colors duration-300 py-6">
-                  <a href="#projects" onClick={handleToggle}>
-                     Projects
+                  <a href="#experience" onClick={handleToggle}>
+                     Experience
                   </a>
                </li>
                <li className="hover:text-rusty-red transition-colors duration-300 py-6">
-                  <a href="#experience" onClick={handleToggle}>
-                     Experience
+                  <a href="#projects" onClick={handleToggle}>
+                     Projects
                   </a>
                </li>
                <li className="hover:text-rusty-red transition-colors duration-300 py-6">

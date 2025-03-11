@@ -17,10 +17,10 @@ const AsideNav = () => {
                      <a href="#biography">Biography</a>
                   </li>
                   <li className="hover:text-rusty-red cursor-pointer w-fit relative before:content-[''] transition-colors duration-300 before:absolute before:bottom-6 before:left-0 before:w-0 before:h-px before:bg-rusty-red hover:before:w-full before:transition-all before:duration-300">
-                     <a href="#projects">Projects</a>
+                     <a href="#experience">Experience</a>
                   </li>
                   <li className="hover:text-rusty-red cursor-pointer w-fit relative before:content-[''] transition-colors duration-300 before:absolute before:bottom-6 before:left-0 before:w-0 before:h-px before:bg-rusty-red hover:before:w-full before:transition-all before:duration-300">
-                     <a href="#experience">Experience</a>
+                     <a href="#projects">Projects</a>
                   </li>
                   <li className="hover:text-rusty-red cursor-pointer w-fit relative before:content-[''] transition-colors duration-300 before:absolute before:bottom-6 before:left-0 before:w-0 before:h-px before:bg-rusty-red hover:before:w-full before:transition-all before:duration-300">
                      <a href="#get-in-touch" className="hover:text-rusty-red">

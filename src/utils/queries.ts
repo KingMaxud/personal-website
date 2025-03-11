@@ -1,4 +1,4 @@
-export const projectsQuery  = `
+export const projectsQuery = `
    query Projects {
       projects {
          id
@@ -36,12 +36,15 @@ export const projectsQueryExtended = `
 
 export const experienceQuery = `
    query ExperienceQuery {
-      experiences {
+      experiences(orderBy: publishedAt_DESC) {
          id
          company
          dates
          position
          results
+         image {
+           url
+         }
       }
    }
 `

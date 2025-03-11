@@ -8,7 +8,7 @@ export type Project = {
    technologies: Technology[]
 }
 
-type Image = {
+export type Image = {
    url: string
 }
 
