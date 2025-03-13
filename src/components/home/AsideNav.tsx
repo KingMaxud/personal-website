@@ -41,7 +41,7 @@ const AsideNav = () => {
                      <img src="/download.svg" alt="download" />
                   </span>
                   <a
-                     href="https://media.graphassets.com/XNgQ7dyQ8qEjqknDWk74"
+                     href="https://media.graphassets.com/YKMYvM3HS5mv39xgd5lg"
                      className="uppercase font-semibold tracking-widest pl-1.5 hover:text-rusty-red transition-colors duration-300"
                   >
                      Download Resume
