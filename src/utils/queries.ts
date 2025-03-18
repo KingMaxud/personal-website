@@ -36,7 +36,7 @@ export const projectsQueryExtended = `
 
 export const experienceQuery = `
    query ExperienceQuery {
-      experiences(orderBy: publishedAt_DESC) {
+      experiences(orderBy: publishedAt_ASC) {
          id
          company
          dates
